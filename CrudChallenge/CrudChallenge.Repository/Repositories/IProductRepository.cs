@@ -1,11 +1,12 @@
 ﻿using CrudChallenge.Model;
+using CrudChallenge.Repository;
 
-namespace CrudChallenge.Repository
+namespace CrudChallenge.Data.Repositories
 {
     public interface IProductRepository
     {
         Task<IEnumerable<Product>> GetProductsAsync();
-        
+
         Task<Product?> GetProductByIdAsync(string Id);
 
         Task<Product> InsertProductAsync(ProductDTO product);

@@ -1,5 +1,5 @@
 ﻿using Asp.Versioning;
-using CrudChallenge.Repository;
+using CrudChallenge.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrudChallenge.API.Controllers
