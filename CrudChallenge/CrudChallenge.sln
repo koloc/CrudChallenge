@@ -12,11 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.Model", "CrudChallenge.Model\CrudChallenge.Model.csproj", "{F512E956-1ED4-4DC4-93A5-72FE636AE396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudChallenge.Model", "CrudChallenge.Model\CrudChallenge.Model.csproj", "{F512E956-1ED4-4DC4-93A5-72FE636AE396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.ReportWorker", "CrudChallenge.ReportWorker\CrudChallenge.ReportWorker.csproj", "{513249CC-13DD-4279-8AEB-D13AE50C9553}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudChallenge.ReportsWorker", "CrudChallenge.ReportWorker\CrudChallenge.ReportsWorker.csproj", "{513249CC-13DD-4279-8AEB-D13AE50C9553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.Notifications", "CrudChallenge.Notifications\CrudChallenge.Notifications.csproj", "{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudChallenge.Notifications", "CrudChallenge.Notifications\CrudChallenge.Notifications.csproj", "{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -28,7 +28,7 @@ namespace CrudChallenge.API.Controllers
 
             _logger.LogDebug("Getting product: {0}", productId);
 
-            var product = await _productRepository.GetProductById(productId);
+            var product = await _productRepository.GetProductByIdAsync(productId);
 
             if (product == null) return NotFound("Product not found");
 
@@ -44,7 +44,7 @@ namespace CrudChallenge.API.Controllers
 
             _logger.LogDebug("Creating product: {0}", JsonConvert.SerializeObject(product));
 
-            var newProduct = await _productRepository.InsertProduct(product);
+            var newProduct = await _productRepository.InsertProductAsync(product);
 
             return Created("products/" + newProduct.Id, "Product Created");
         }
@@ -58,7 +58,7 @@ namespace CrudChallenge.API.Controllers
 
             _logger.LogDebug("Updating product: {0}", JsonConvert.SerializeObject(product));
 
-            await _productRepository.UpdateProduct(product);
+            await _productRepository.UpdateProductAsync(product);
 
             return Ok("Product Updated");
         }
@@ -70,7 +70,7 @@ namespace CrudChallenge.API.Controllers
 
             _logger.LogDebug("Deleting product: {0}", productId);
 
-            await _productRepository.DeleteProduct(productId);
+            await _productRepository.DeleteProductAsync(productId);
 
             return Ok("Product Deleted");
         }

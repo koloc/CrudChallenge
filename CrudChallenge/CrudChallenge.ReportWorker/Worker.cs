@@ -1,21 +1,30 @@
+using CrudChallenge.Notifications;
+using CrudChallenge.Repository;
+
 namespace CrudChallenge.ReportWorker
 {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
 
-        public Worker(ILogger<Worker> logger)
+        private IProductRepository _productRepository;
+
+        private IEmailService _emailService;
+
+        public Worker(ILogger<Worker> logger, IProductRepository productRepository, IEmailService emailService)
         {
             _logger = logger;
+            _productRepository = productRepository;
+            _emailService = emailService;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
-            }
+            var list = await _productRepository.GetProductsAsync();
+
+            var report = "The number of products in our system is " + list.Count();
+
+            _emailService.SendReportReadyEmail(report);
         }
     }
 }

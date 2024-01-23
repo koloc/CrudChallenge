@@ -4,12 +4,14 @@ namespace CrudChallenge.Repository
 {
     public interface IProductRepository
     {
-        public Task<Product?> GetProductById(string Id);
+        Task<IEnumerable<Product>> GetProductsAsync();
+        
+        Task<Product?> GetProductByIdAsync(string Id);
 
-        Task<Product> InsertProduct(ProductDTO product);
+        Task<Product> InsertProductAsync(ProductDTO product);
 
-        Task<Product> UpdateProduct(ProductDTO product);
+        Task<Product> UpdateProductAsync(ProductDTO product);
 
-        Task DeleteProduct(string productId);
+        Task DeleteProductAsync(string productId);
     }
 }
