@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using CrudChallenge.API.Middlewares;
 using CrudChallenge.Data;
 using CrudChallenge.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +38,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 

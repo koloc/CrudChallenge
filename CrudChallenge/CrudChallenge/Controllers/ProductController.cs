@@ -75,6 +75,18 @@ namespace CrudChallenge.API.Controllers
             return Ok("Product Deleted");
         }
 
+        [HttpGet("products/appexception", Name = "GetProductAppException")]
+        public IActionResult GetAppException()
+        {
+            throw new ApplicationException("There was an exception!");
+        }
+
+        [HttpGet("products/exception", Name = "GetProductException")]
+        public IActionResult GetException()
+        {
+            throw new Exception("There was an exception!");
+        }
+
         private static string ValidateProduct(ProductDTO product)
         {
             if (string.IsNullOrWhiteSpace(product.Name)) return "Product name cannot be empty";
