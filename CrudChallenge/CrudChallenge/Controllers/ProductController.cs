@@ -1,11 +1,15 @@
-﻿using CrudChallenge.Model;
+﻿using Asp.Versioning;
+using CrudChallenge.Model;
 using CrudChallenge.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace CrudChallenge.API.Controllers
 {
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "v1")]
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -18,6 +22,7 @@ namespace CrudChallenge.API.Controllers
             _productRepository = productRepository;
         }
 
+        [MapToApiVersion("1.0")]
         [HttpGet("products/{productId}", Name = "GetProducts")]
         public async Task<IActionResult> Get([FromRoute] string productId)
         {
@@ -30,6 +35,13 @@ namespace CrudChallenge.API.Controllers
             if (product == null) return NotFound("Product not found");
 
             return Ok(product);
+        }
+
+        [MapToApiVersion("2.0")]
+        [HttpGet("products/{productId}", Name = "GetProducts")]
+        public async Task<IActionResult> GetV2([FromRoute] string productId)
+        {
+            return Ok("Get product by id v2 not implemented");
         }
 
         [HttpPost("products", Name = "CreateProduct")]

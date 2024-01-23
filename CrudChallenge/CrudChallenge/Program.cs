@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using CrudChallenge.Data;
 using CrudChallenge.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,13 @@ builder.Services.AddDbContext<CrudChallengeDbContext>(options =>
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddApiVersioning(setup =>
+{
+    setup.DefaultApiVersion = new ApiVersion(1, 0);
+    setup.AssumeDefaultVersionWhenUnspecified = true;
+    setup.ReportApiVersions = true;
+}).AddMvc();
 
 var app = builder.Build();
 

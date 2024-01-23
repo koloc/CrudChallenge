@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.Model", "CrudChallenge.Model\CrudChallenge.Model.csproj", "{F512E956-1ED4-4DC4-93A5-72FE636AE396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.ReportWorker", "CrudChallenge.ReportWorker\CrudChallenge.ReportWorker.csproj", "{513249CC-13DD-4279-8AEB-D13AE50C9553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudChallenge.Notifications", "CrudChallenge.Notifications\CrudChallenge.Notifications.csproj", "{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{F512E956-1ED4-4DC4-93A5-72FE636AE396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F512E956-1ED4-4DC4-93A5-72FE636AE396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F512E956-1ED4-4DC4-93A5-72FE636AE396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513249CC-13DD-4279-8AEB-D13AE50C9553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513249CC-13DD-4279-8AEB-D13AE50C9553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513249CC-13DD-4279-8AEB-D13AE50C9553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513249CC-13DD-4279-8AEB-D13AE50C9553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FBE13D-B03D-4A8A-8BA0-B18D58D45141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
