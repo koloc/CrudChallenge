@@ -1,6 +1,6 @@
 ﻿using Asp.Versioning;
+using CrudChallenge.Data.Repositories;
 using CrudChallenge.Model;
-using CrudChallenge.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -36,7 +36,7 @@ namespace CrudChallenge.API.Controllers
         }
 
         [HttpPost("products", Name = "CreateProduct")]
-        public async Task<IActionResult> Post([FromBody] ProductDTO product)
+        public async Task<IActionResult> Post([FromBody] CreateProductRequest product)
         {
             var error = ValidateProduct(product);
 
@@ -50,7 +50,7 @@ namespace CrudChallenge.API.Controllers
         }
 
         [HttpPut("products", Name = "UpdateProduct")]
-        public async Task<IActionResult> Put([FromBody] ProductDTO product)
+        public async Task<IActionResult> Put([FromBody] UpdateProductRequest product)
         {
             var error = ValidateProduct(product);
 
@@ -87,7 +87,7 @@ namespace CrudChallenge.API.Controllers
             throw new Exception("There was an exception!");
         }
 
-        private static string ValidateProduct(ProductDTO product)
+        private static string ValidateProduct(CreateProductRequest product)
         {
             if (string.IsNullOrWhiteSpace(product.Name)) return "Product name cannot be empty";
 

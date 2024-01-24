@@ -1,7 +1,7 @@
 using CrudChallenge.Data;
-using CrudChallenge.Notifications;
+using CrudChallenge.Data.Repositories;
+using CrudChallenge.Notifications.Services;
 using CrudChallenge.ReportWorker;
-using CrudChallenge.Repository;
 using Microsoft.EntityFrameworkCore;
 
 IHost host = Host.CreateDefaultBuilder(args)

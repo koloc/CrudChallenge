@@ -1,4 +1,4 @@
-﻿namespace CrudChallenge.Notifications
+﻿namespace CrudChallenge.Notifications.Services
 {
     public interface IEmailService
     {

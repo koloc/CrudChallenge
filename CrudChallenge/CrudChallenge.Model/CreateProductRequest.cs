@@ -1,9 +1,7 @@
 ﻿namespace CrudChallenge.Model
 {
-    public class ProductDTO
+    public class CreateProductRequest
     {
-        public string Id { get; set; }
-
         public string Name { get; set; }
 
         public string Code { get; set; }

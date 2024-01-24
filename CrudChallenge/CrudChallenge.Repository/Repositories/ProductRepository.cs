@@ -1,8 +1,9 @@
 ﻿using CrudChallenge.Data;
 using CrudChallenge.Model;
+using CrudChallenge.Repository;
 using Microsoft.EntityFrameworkCore;
 
-namespace CrudChallenge.Repository
+namespace CrudChallenge.Data.Repositories
 {
     public class ProductRepository : IProductRepository
     {
@@ -32,7 +33,7 @@ namespace CrudChallenge.Repository
             ).FirstOrDefaultAsync(s => s.Id == Id);
         }
 
-        public async Task<Product> InsertProductAsync(ProductDTO product)
+        public async Task<Product> InsertProductAsync(CreateProductRequest product)
         {
             Product newProduct = new()
             {
@@ -49,7 +50,7 @@ namespace CrudChallenge.Repository
             return newProduct;
         }
 
-        public async Task<Product> UpdateProductAsync(ProductDTO product)
+        public async Task<Product> UpdateProductAsync(UpdateProductRequest product)
         {
             var entity = await _dBContext.Products.FirstOrDefaultAsync(s => s.Id == product.Id);
 

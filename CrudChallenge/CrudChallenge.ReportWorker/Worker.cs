@@ -1,5 +1,5 @@
-using CrudChallenge.Notifications;
-using CrudChallenge.Repository;
+using CrudChallenge.Data.Repositories;
+using CrudChallenge.Notifications.Services;
 
 namespace CrudChallenge.ReportWorker
 {

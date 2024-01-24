@@ -9,9 +9,9 @@ namespace CrudChallenge.Data.Repositories
 
         Task<Product?> GetProductByIdAsync(string Id);
 
-        Task<Product> InsertProductAsync(ProductDTO product);
+        Task<Product> InsertProductAsync(CreateProductRequest product);
 
-        Task<Product> UpdateProductAsync(ProductDTO product);
+        Task<Product> UpdateProductAsync(UpdateProductRequest product);
 
         Task DeleteProductAsync(string productId);
     }

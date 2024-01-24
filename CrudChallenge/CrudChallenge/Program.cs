@@ -1,7 +1,7 @@
 using Asp.Versioning;
 using CrudChallenge.API.Middlewares;
 using CrudChallenge.Data;
-using CrudChallenge.Repository;
+using CrudChallenge.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
